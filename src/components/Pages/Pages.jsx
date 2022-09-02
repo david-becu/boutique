@@ -1,8 +1,21 @@
 import React from 'react';
 import CategoryCard from '../CategoryCard/CategoryCard';
 
-
 const Pages = () => {
+
+  const data = [
+    { cardImage: 'img/homme.jpeg', cardTitle: 'Homme', cardText: 'Vétements pour hommes' },
+    { cardImage: 'img/femme.jpeg', cardTitle: 'Femme', cardText: 'Vétements pour femmes' },
+    { cardImage: 'img/enfant.jpeg', cardTitle: 'Enfant', cardText: 'Vétements pour enfants' },
+    { cardImage: 'img/baby.jpeg', cardTitle: 'Baby', cardText: 'Vétements pour nourrissons' }
+  ];
+
+  const elements = data.map((element) => 
+    <div className="categoryCard d-flex justify-content-center m-2" key={element.cardTitle}>
+      <CategoryCard cardImage={element.cardImage} cardTitle={element.cardTitle} cardText={element.cardText}/>
+    </div>
+);
+
   return (
     <>
       <header className='container-fluid'>
@@ -10,21 +23,12 @@ const Pages = () => {
           <h1>La boutique de nom/prénom</h1>
         </div>
       </header>
-      <main className='container d-flex justify-content-evenly'>
-        <CategoryCard imageSrc="https://picsum.photos/200"
-          cardTitle="Category One"
-          buttonText="choice 1" 
-          cardText="Ceci est une catégorie de premier choix"
-          />-
-        <CategoryCard imageSrc="https://picsum.photos/200"
-          cardTitle="Category Two"
-          buttonText="choice 2" 
-          cardText="Ceci est une catégorie de second choix"
-          />-
-      </main>
 
+      <main className='container d-flex justify-content-evenly'>
+        {elements}
+      </main>
     </>
   )
 }
 
-export default Pages
+export default Pages;

@@ -1,0 +1,11 @@
+.divTextAreaFormControl{
+    flex-direction: column;
+}
+
+.icon-xl{
+    font-size: x-large;
+}
+
+.icon-xxl{
+    font-size: xx-large;
+}

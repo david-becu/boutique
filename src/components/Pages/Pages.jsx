@@ -1,5 +1,7 @@
 import React from 'react';
+import './Pages.css';
 import CategoryCard from '../CategoryCard/CategoryCard';
+import ContactForm from '../ContactForm/ContactForm';
 
 const Pages = () => {
 
@@ -10,11 +12,11 @@ const Pages = () => {
     { cardImage: 'img/baby.jpeg', cardTitle: 'Baby', cardText: 'Vétements pour nourrissons' }
   ];
 
-  const elements = data.map((element) => 
+  const elements = data.map((element) =>
     <div className="categoryCard d-flex justify-content-center m-2" key={element.cardTitle}>
-      <CategoryCard cardImage={element.cardImage} cardTitle={element.cardTitle} cardText={element.cardText}/>
+      <CategoryCard cardImage={element.cardImage} cardTitle={element.cardTitle} cardText={element.cardText} />
     </div>
-);
+  );
 
   return (
     <>
@@ -25,7 +27,13 @@ const Pages = () => {
       </header>
 
       <main className='container d-flex justify-content-evenly'>
-        {elements}
+        <div className='elements d-flex'>
+          {elements}
+        </div>
+        <br />
+        <div className='contactForm'>
+          <ContactForm />
+        </div>
       </main>
     </>
   )

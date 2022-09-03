@@ -1,0 +1,7 @@
+main{
+    flex-direction: column;
+}
+
+.elements{
+    flex-direction: row;
+}

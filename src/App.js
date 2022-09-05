@@ -6,11 +6,14 @@ import Pages from './components/Pages/Pages';
 
 function App() {
 
+  const [isDark, setIsDark] = useState(false);
+  const bgColor = isDark ? "App bg-dark text-white" : "App";
+   
   return (
     <>
-      <div>
+      <body className={`${bgColor}`}> 
         <Pages />
-      </div>
+      </body>
     </>
   );
 }

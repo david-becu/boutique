@@ -21,12 +21,11 @@ const Pages = () => {
 
   return (
     <>
-      <header className='container-fluid'>
+      {/* <header className='container-fluid'>
         <div className='pages row bg-dark text-light text-center'>
           <h1>La boutique de nom/prénom </h1>
-        {/* <Switch/> */}
         </div>
-      </header>
+      </header> */}
 
       <main className='container d-flex justify-content-evenly'>
         <div className='elements d-flex'>

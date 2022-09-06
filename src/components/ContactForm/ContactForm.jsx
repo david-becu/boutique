@@ -8,9 +8,6 @@ import { BsFillPenFill } from "react-icons/bs";
 
 const ContactForm = () => {
 
-    // <formObj nameObj={e.nameObj.target.value} />
-    
-    
 function formSubmit(event){
     event.preventDefault();
     const form =  event.target;

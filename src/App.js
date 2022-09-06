@@ -16,7 +16,6 @@ function App() {
   
   // Change le texte du label en fonction du changement d'état de isDark
   const colorUI = isDark ? 'dark' : 'white';
-
     
   return (
     <>

@@ -22,7 +22,7 @@ function App() {
       <div className={`${bgColor}`}>
         <div className="Switch">
           <div className="form-check form-switch">
-            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={isDark} onClick={()=>setIsDark(!isDark)}/>
+            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={isDark} onChange={()=>setIsDark(!isDark)}/>
             <label className={`${bgColorLabel}`} htmlFor="flexSwitchCheckChecked">{colorUI}</label>
           </div>
         </div>

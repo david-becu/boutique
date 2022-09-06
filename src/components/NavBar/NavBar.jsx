@@ -1,13 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
 
+const NavBar = ({isDark, setIsDark}) => {
 
-const NavBar = () => {
-
-    const [isDark, setIsDark] = useState(false);
+    // const [isDark, setIsDark] = useState(false);
 
     // Change la couleur de fond de la <div> principale en fonction du changement d'état de isDark
-    const bgColor = isDark ? "bg-dark text-white" : "";
+    const bgColor = isDark ? "App bg-dark text-white" : "App";
 
     // Change la couleur de fond du switch en fonction du changement d'état de isDark
     const bgColorLabel = isDark ? "form-check-label bg-dark text-white" : "form-check-label bg-white text-dark";
@@ -15,8 +14,11 @@ const NavBar = () => {
     // Change le texte du label en fonction du changement d'état de isDark
     const colorUI = isDark ? 'dark' : 'white';
 
-    return (
+    console.log(`isDark (NavBar:17) = ${isDark}`);
+    
 
+    return (
+        
         <div className={`${bgColor}`}>
             <div className='container-fluid'>
                 <div className='pages row bg-white text-dark text-center'>

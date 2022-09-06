@@ -2,6 +2,7 @@ import React from 'react';
 import './Pages.css';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import ContactForm from '../ContactForm/ContactForm';
+// import Switch from '../Switch/Switch';
 
 const Pages = () => {
 
@@ -22,7 +23,8 @@ const Pages = () => {
     <>
       <header className='container-fluid'>
         <div className='pages row bg-dark text-light text-center'>
-          <h1>La boutique de nom/prénom</h1>
+          <h1>La boutique de nom/prénom </h1>
+        {/* <Switch/> */}
         </div>
       </header>
 

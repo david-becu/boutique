@@ -2,7 +2,6 @@ import React from 'react';
 import './CategoryCard.css';
 
 const CategoryCard = (props) => {
-
     return(
         <div className="card" >
         <img src={props.cardImage} alt="" className="card-img-top" />

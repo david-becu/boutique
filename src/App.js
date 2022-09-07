@@ -8,15 +8,18 @@ import Pages from './components/Pages/Pages';
 function App() {
 
   const [isDark, setIsDark] = useState(false);
-  <NavBar isDark={isDark} setIsDark={setIsDark} />
+  const bgMain = isDark ?  'container-fluid d-flex justify-content-evenly bg-dark': 'container-fluid d-flex justify-content-evenly bg-light' ;
 
+  
   return (
-    <>
+    <div className='bg-light text-dark'>
       <header>
-        <NavBar />
+      <NavBar isDark={isDark} setIsDark={setIsDark} />
       </header>
+      <main className={`${bgMain}`}>
       <Pages />
-    </>
+      </main>
+    </div>
   );
 }
 

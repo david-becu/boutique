@@ -3,10 +3,12 @@ import { useState } from 'react';
 
 const NavBar = ({isDark, setIsDark}) => {
 
-    // const [isDark, setIsDark] = useState(false);
-
     // Change la couleur de fond de la <div> principale en fonction du changement d'état de isDark
-    const bgColor = isDark ? "App bg-dark text-white" : "App";
+    const bgColorNavbar = isDark ? "navbar navbar-expand-lg bg-dark text-light" : "navbar navbar-expand-lg bg-light text-dark";
+    const brandColorNavbar = isDark ? "navbar-brand text-light" : "navbar-brand text-dark";
+    const navlinkColor = isDark ? "nav-link active text-light" : "nav-link active text-dark"
+    // Change la couleur de fond de la <div> principale en fonction du changement d'état de isDark
+    const bgColor = isDark ? "App bg-dark text-white" : "App bg-light text-dark";
 
     // Change la couleur de fond du switch en fonction du changement d'état de isDark
     const bgColorLabel = isDark ? "form-check-label bg-dark text-white" : "form-check-label bg-white text-dark";
@@ -21,24 +23,24 @@ const NavBar = ({isDark, setIsDark}) => {
         
         <div className={`${bgColor}`}>
             <div className='container-fluid'>
-                <div className='pages row bg-white text-dark text-center'>
+                <div className='pages row text-center'>
                     <h1>La boutique de nom/prénom </h1>
                 </div>
-                <nav className="navbar navbar-expand-lg bg-white">
-                    <div className="container-fluid">
+                <nav className={`${bgColorNavbar}`}>
+                    <div className="container-fluid ">
 
                         {/* ===== Début marque boutique ===== */}
-                        <a className="navbar-brand" href="#">La boutique</a>
+                        <a className={`${brandColorNavbar}`} href="#">La boutique</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         {/* ===== Fin marque boutique ===== */}
 
                         {/* ===== Début liste navigation ===== */}
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div className="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">Produits</a>
+                                    <a className={`${navlinkColor}`} aria-current="page" href="#">Produits</a>
                                 </li>
                             </ul>
                             {/* ===== Fin liste navigation ===== */}

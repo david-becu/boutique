@@ -8,7 +8,7 @@ import Pages from './components/Pages/Pages';
 function App() {
 
   const [isDark, setIsDark] = useState(false);
-  // <NavBar isDark={isDark} setIsDark={setIsDark}/>
+  <NavBar isDark={isDark} setIsDark={setIsDark} />
 
   return (
     <>

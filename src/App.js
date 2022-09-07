@@ -8,7 +8,7 @@ import Pages from './components/Pages/Pages';
 function App() {
 
   const [isDark, setIsDark] = useState(false);
-  const [currentPage, setCurrentPage] = useState('HomeScreen');
+  const [currentPage, setCurrentPage] = useState("HomeScreen");
 
   // Change la couleur de fond de <main> en fonction du changement d'état de isDark
   const bgMain = isDark
@@ -21,7 +21,7 @@ function App() {
         <NavBar isDark={isDark} setIsDark={setIsDark} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </header>
       <main className={`${bgMain}`}>
-        <Pages />
+        <Pages currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </main>
     </div>
   );

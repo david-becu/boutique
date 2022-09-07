@@ -2,8 +2,9 @@ import React from 'react';
 import './Pages.css';
 import CategoryCard from '../CategoryCard/CategoryCard';
 import ContactForm from '../ContactForm/ContactForm';
+import ProductScreen from '../ProductScreen/ProductScreen';
 
-const Pages = () => {
+const Pages = ({currentPage, setCurrentPage}) => {
 
   const data = [
     { cardImage: 'img/homme.jpeg', cardTitle: 'Homme', cardText: 'Vétements pour hommes' },
@@ -18,9 +19,9 @@ const Pages = () => {
     </div>
   );
 
-  return (
-    <>
-      <main className='container d-flex justify-content-evenly'>
+  if (currentPage === "HomeScreen") {
+    return (
+      <>
         <div className='elements d-flex'>
           {elements}
         </div>
@@ -28,9 +29,15 @@ const Pages = () => {
         <div className='contactForm'>
           <ContactForm />
         </div>
-      </main>
-    </>
-  )
+      </>
+    )
+  }
+
+  if (currentPage === "ProductScreen") {
+    return (
+      <ProductScreen />
+    )
+  }
 }
 
 export default Pages;

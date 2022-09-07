@@ -1,13 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
 
-const NavBar = ({isDark, setIsDark, currentPage ,setCurrentPage}) => {
+const NavBar = ({ isDark, setIsDark, currentPage, setCurrentPage }) => {
 
     // Change la couleur de fond de la <div> principale en fonction du changement d'état de isDark
     const bgColorNavbar = isDark ? "navbar navbar-expand-lg bg-dark text-light" : "navbar navbar-expand-lg bg-light text-dark";
     const brandColorNavbar = isDark ? "navbar-brand text-light" : "navbar-brand text-dark";
-    const navlinkColor = isDark ? "nav-link active text-light" : "nav-link active text-dark"
-    
+    // const navlinkColor = isDark ? "nav-link active text-light" : "nav-link active text-dark"
+    const navlinkColor = isDark ? "text-light" : "text-dark"
+
+
     // Change la couleur de fond de la <div> principale en fonction du changement d'état de isDark
     const bgColor = isDark ? "App bg-dark text-white" : "App bg-light text-dark";
 
@@ -17,11 +19,10 @@ const NavBar = ({isDark, setIsDark, currentPage ,setCurrentPage}) => {
     // Change le texte du label en fonction du changement d'état de isDark
     const colorUI = isDark ? 'dark' : 'white';
 
-    console.log(`isDark (NavBar:17) = ${isDark}`);
-    
+    console.log(`currentPage (NavBar:17) = ${currentPage}`);
 
     return (
-        
+
         <div className={`${bgColor}`}>
             <div className='container-fluid'>
                 <div className='pages row text-center'>
@@ -31,7 +32,7 @@ const NavBar = ({isDark, setIsDark, currentPage ,setCurrentPage}) => {
                     <div className="container-fluid ">
 
                         {/* ===== Début marque boutique ===== */}
-                        <span className={`${brandColorNavbar}`} onClick={setCurrentPage("HomeScreen")}>La boutique</span>
+                        <span className={`${brandColorNavbar}`} onClick={()=>setCurrentPage("HomeScreen")}>La boutique</span>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -41,7 +42,7 @@ const NavBar = ({isDark, setIsDark, currentPage ,setCurrentPage}) => {
                         <div className="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
                                 <li className="nav-item">
-                                    <span className={`${navlinkColor}`} aria-current="page" onClick={setCurrentPage("ProductScreen")}></span>
+                                    <span className={`${navlinkColor}`} aria-current="page" onClick={()=>setCurrentPage("ProductScreen")}>Produits</span>
                                 </li>
                             </ul>
                             {/* ===== Fin liste navigation ===== */}

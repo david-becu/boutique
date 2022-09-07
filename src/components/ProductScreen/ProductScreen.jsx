@@ -1,8 +1,9 @@
 import React from 'react'
 
 const ProductScreen = () => {
+
   return (
-    <div className='ProductScreen'>
+    <div className='ProductScreen bg-white '>
         <h1>Product Screen</h1>
     </div>
   )

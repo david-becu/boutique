@@ -8,16 +8,20 @@ import Pages from './components/Pages/Pages';
 function App() {
 
   const [isDark, setIsDark] = useState(false);
-  const bgMain = isDark ?  'container-fluid d-flex justify-content-evenly bg-dark': 'container-fluid d-flex justify-content-evenly bg-light' ;
+  const [currentPage, setCurrentPage] = useState('HomeScreen');
 
-  
+  // Change la couleur de fond de <main> en fonction du changement d'état de isDark
+  const bgMain = isDark
+    ? 'container-fluid d-flex justify-content-evenly bg-dark'
+    : 'container-fluid d-flex justify-content-evenly bg-light';
+
   return (
     <div className='bg-light text-dark'>
       <header>
-      <NavBar isDark={isDark} setIsDark={setIsDark} />
+        <NavBar isDark={isDark} setIsDark={setIsDark} currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </header>
       <main className={`${bgMain}`}>
-      <Pages />
+        <Pages />
       </main>
     </div>
   );

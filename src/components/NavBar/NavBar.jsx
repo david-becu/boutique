@@ -1,4 +1,5 @@
 import React from 'react'
+import './NavBar.css';
 import { useState } from 'react';
 
 const NavBar = ({ isDark, setIsDark, currentPage, setCurrentPage }) => {

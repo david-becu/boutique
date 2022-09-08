@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Pages from './components/Pages/Pages';
+import ProductScreen from './components/ProductScreen/ProductScreen';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <main className={`${bgMain}`}>
         <Pages currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       </main>
+      <ProductScreen/>
     </div>
   );
 }
